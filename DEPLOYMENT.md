@@ -1,8 +1,9 @@
 # Sanda Class - Deployment Instructions
 
 ## 🌐 Live Website
-- **Frontend**: https://[your-username].github.io/sanda_class
-- **Backend**: https://sanda-class-api.railway.app (or your chosen platform)
+- **Frontend**: https://www.wingsanda.com (Custom Domain)
+- **GitHub Pages**: https://wingNTU.github.io/sanda_class (Fallback)
+- **Backend**: https://sanda-class.onrender.com
 
 ## 🚀 Deployment Status
 - ✅ Frontend: Deployed to GitHub Pages
