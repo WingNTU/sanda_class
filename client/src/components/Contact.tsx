@@ -1,31 +1,31 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageSquare, Instagram } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Phone",
-      details: "+1 (555) 123-4567",
-      action: "Call Now"
+      title: "Telegram",
+      details: "tele me @wingbae for enquiries",
+      action: "Message Now"
     },
     {
-      icon: Mail,
-      title: "Email",
-      details: "coach@sandatraining.com",
-      action: "Send Email"
+      icon: Instagram,
+      title: "Instagram",
+      details: "check out more sanda contents @hoawing",
+      action: "Send Message"
     },
     {
       icon: MapPin,
       title: "Location",
-      details: "Downtown Martial Arts Center\n123 Fighter Street, City",
+      details: "May vary due to training venues \nLocation will be shared via Telegram",
       action: "Get Directions"
     },
     {
       icon: Clock,
       title: "Training Hours",
-      details: "Mon-Fri: 6AM-9PM\nSat-Sun: 8AM-6PM",
+      details: "Sat-Sun: 530pm - 7pm \nTentative slots available",
       action: "View Schedule"
     }
   ];
@@ -54,7 +54,20 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed whitespace-pre-line">
                   {info.details}
                 </p>
-                <Button variant="ghost" size="sm" className="text-martial-gold hover:text-martial-red">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="text-martial-gold hover:text-martial-red"
+                  onClick={() => {
+                    if (index === 0) {
+                      // Telegram contact
+                      window.open('https://t.me/wingbae', '_blank');
+                    } else if (index === 1) {
+                      // Email contact
+                      window.open('https://www.instagram.com/hoawing', '_blank');
+                    }
+                  }}
+                >
                   {info.action}
                 </Button>
               </Card>
@@ -73,13 +86,14 @@ const Contact = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="cta" size="lg" className="group">
+                <Button 
+                  variant="cta" 
+                  size="lg" 
+                  className="group"
+                  onClick={() => window.open('https://t.me/wingbae', '_blank')}
+                >
                   <MessageSquare className="w-5 h-5" />
-                  WhatsApp Me
-                </Button>
-                <Button variant="outline-hero" size="lg">
-                  <Phone className="w-5 h-5" />
-                  Call Directly
+                  Telegram Me
                 </Button>
               </div>
             </div>

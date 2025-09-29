@@ -15,4 +15,12 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  assetsInclude: [
+    "**/*.mov",
+    "**/*.MOV", 
+    "**/*.mp4",
+    "**/*.MP4",
+    "**/*.webm",
+    "**/*.avi"
+  ],
 }));

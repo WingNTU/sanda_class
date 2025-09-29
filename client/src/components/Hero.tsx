@@ -20,21 +20,22 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-martial-red/20 border border-martial-red/30 rounded-full px-4 py-2 mb-6">
             <Zap className="w-4 h-4 text-martial-gold" />
-            <span className="text-sm font-medium text-martial-light">Professional Sanda Coach</span>
+            <span className="text-sm font-medium text-martial-light">Freelance Sanda Coach</span>
           </div>
           
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Master the Art of
+            Sweat through
             <span className="block text-transparent bg-gradient-to-r from-martial-red to-martial-gold bg-clip-text">
-              Combat Sanda
+              Sanda
             </span>
+            together
           </h1>
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your fighting skills with expert coaching in Chinese kickboxing. 
-            Build strength, technique, and confidence through personalized training.
+            Join me in an exciting journey with Chinese kickboxing. 
+            Build strength, technique, and confidence through fun, engaging training.
           </p>
           
           {/* CTA Buttons */}
@@ -50,18 +51,14 @@ const Hero = () => {
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-martial-gold mb-2">5+</div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-martial-gold mb-2">100+</div>
-              <div className="text-muted-foreground">Students Trained</div>
-            </div>
-            <div className="text-center">
               <div className="text-3xl font-bold text-martial-gold mb-2">15+</div>
-              <div className="text-muted-foreground">Competitions Won</div>
+              <div className="text-muted-foreground">Competitions</div>
             </div>
           </div>
         </div>

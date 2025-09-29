@@ -1,13 +1,33 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
+import BookingModal from "@/components/BookingModal";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+  const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const elementId = href.replace('#', '');
+    smoothScrollTo(elementId);
+    setIsOpen(false); // Close mobile menu if open
+  };
 
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
+    { href: "#gallery", label: "Gallery" },
     { href: "#services", label: "Programs" },
     { href: "#contact", label: "Contact" }
   ];
@@ -21,7 +41,7 @@ const Navigation = () => {
             <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-foreground" />
             </div>
-            <span className="text-xl font-bold text-foreground">SandaCoach</span>
+            <span className="text-xl font-bold text-foreground">About Wing</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -30,12 +50,17 @@ const Navigation = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground hover:text-martial-red transition-colors"
+                onClick={(e) => handleNavClick(link.href, e)}
+                className="text-muted-foreground hover:text-martial-red transition-colors cursor-pointer"
               >
                 {link.label}
               </a>
             ))}
-            <Button variant="hero" size="sm">
+            <Button 
+              variant="hero" 
+              size="sm"
+              onClick={() => setIsBookingModalOpen(true)}
+            >
               Book Session
             </Button>
           </div>
@@ -57,19 +82,30 @@ const Navigation = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-muted-foreground hover:text-martial-red transition-colors px-2 py-1"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleNavClick(link.href, e)}
+                  className="text-muted-foreground hover:text-martial-red transition-colors px-2 py-1 cursor-pointer"
                 >
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="mx-2 mt-2">
+              <Button 
+                variant="hero" 
+                size="sm" 
+                className="mx-2 mt-2"
+                onClick={() => setIsBookingModalOpen(true)}
+              >
                 Book Session
               </Button>
             </div>
           </div>
         )}
       </div>
+
+      {/* Booking Modal */}
+      <BookingModal 
+        isOpen={isBookingModalOpen} 
+        onClose={() => setIsBookingModalOpen(false)} 
+      />
     </nav>
   );
 };

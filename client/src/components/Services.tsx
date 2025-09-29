@@ -1,29 +1,33 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { User, Users, Target, Clock, CheckCircle } from "lucide-react";
+import { useState } from "react";
+import BookingModal from "@/components/BookingModal";
 
 const Services = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
   const services = [
-    {
-      icon: User,
-      title: "1-on-1 Personal Training",
-      price: "$80",
-      duration: "60 minutes",
-      description: "Personalized coaching focused on your specific goals and skill level",
-      features: [
-        "Custom training plan",
-        "Technique refinement",
-        "Competition preparation",
-        "Flexible scheduling"
-      ],
-      popular: false
-    },
+    // {
+    //   icon: User,
+    //   title: "1-on-1 Personal Training",
+    //   price: "$80",
+    //   duration: "60 minutes",
+    //   description: "Personalized coaching focused on your specific goals and skill level",
+    //   features: [
+    //     "Custom training plan",
+    //     "Technique refinement",
+    //     "Competition preparation",
+    //     "Flexible scheduling"
+    //   ],
+    //   popular: false
+    // },
     {
       icon: Users,
-      title: "Small Group Classes",
-      price: "$45",
+      title: "Group Classes",
+      price: "$50",
       duration: "90 minutes",
-      description: "Train with 2-4 other students in a supportive group environment",
+      description: "Train in a supportive group environment while receiving personalized attention",
       features: [
         "Shared learning experience",
         "Partner drills",
@@ -32,20 +36,20 @@ const Services = () => {
       ],
       popular: true
     },
-    {
-      icon: Target,
-      title: "Competition Prep",
-      price: "$100",
-      duration: "90 minutes",
-      description: "Intensive training for athletes preparing for Sanda competitions",
-      features: [
-        "Advanced techniques",
-        "Fight strategy",
-        "Mental preparation",
-        "Video analysis"
-      ],
-      popular: false
-    }
+    // {
+    //   icon: Target,
+    //   title: "Competition Prep",
+    //   price: "$100",
+    //   duration: "90 minutes",
+    //   description: "Intensive training for athletes preparing for Sanda competitions",
+    //   features: [
+    //     "Advanced techniques",
+    //     "Fight strategy",
+    //     "Mental preparation",
+    //     "Video analysis"
+    //   ],
+    //   popular: false
+    // }
   ];
 
   return (
@@ -58,13 +62,13 @@ const Services = () => {
               Training Programs
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Choose the training format that best fits your goals and schedule. 
+              For now, I offer small group classes to provide personalized attention in a collaborative setting. <br /> 
               All programs include comprehensive Sanda technique instruction.
             </p>
           </div>
           
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 mb-16">
             {services.map((service, index) => (
               <Card 
                 key={index} 
@@ -83,9 +87,18 @@ const Services = () => {
                 <div className="text-center mb-6">
                   <service.icon className="w-12 h-12 text-martial-gold mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
-                  <div className="flex items-baseline justify-center gap-1 mb-2">
-                    <span className="text-3xl font-bold text-martial-red">{service.price}</span>
-                    <span className="text-muted-foreground">/session</span>
+                  <div className="flex flex-col items-center gap-1 mb-2">
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="text-lg font-medium text-muted-foreground line-through">{service.price}</span>
+                      <span className="text-sm text-muted-foreground">/session</span>
+                    </div>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="text-3xl font-bold text-martial-red">$35</span>
+                      <span className="text-muted-foreground">/session</span>
+                      <span className="ml-2 bg-martial-gold text-martial-dark px-2 py-1 rounded-full text-xs font-bold">
+                        SALE
+                      </span>
+                    </div>
                   </div>
                   <div className="flex items-center justify-center gap-2 text-muted-foreground">
                     <Clock className="w-4 h-4" />
@@ -109,28 +122,21 @@ const Services = () => {
                 <Button 
                   variant={service.popular ? "hero" : "outline-hero"} 
                   className="w-full"
+                  onClick={() => setIsBookingModalOpen(true)}
                 >
                   Book Session
                 </Button>
               </Card>
             ))}
           </div>
-          
-          {/* Additional Info */}
-          <div className="text-center bg-gradient-card rounded-lg p-8 border border-border">
-            <h3 className="text-xl font-bold text-foreground mb-4">
-              First Session Special
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              New students get 50% off their first personal training session. 
-              Experience the quality of professional Sanda coaching before committing.
-            </p>
-            <Button variant="cta" size="lg">
-              Claim Your Trial Session
-            </Button>
-          </div>
         </div>
       </div>
+
+      {/* Booking Modal */}
+      <BookingModal 
+        isOpen={isBookingModalOpen} 
+        onClose={() => setIsBookingModalOpen(false)} 
+      />
     </section>
   );
 };
