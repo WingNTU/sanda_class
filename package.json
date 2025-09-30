@@ -1,20 +1,19 @@
 {
-  "name": "sanda-class-full-stack",
+  "name": "sanda-class-vercel",
   "private": true,
   "version": "1.0.0",
+  "description": "Sanda Martial Arts Class - Full Stack App on Vercel",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
-    "client:dev": "cd client && npm run dev",
-    "client:build": "cd client && npm run build",
-    "client:preview": "cd client && npm run preview",
-    "server:dev": "cd server && node server.js",
-    "server:start": "cd server && npm run start",
-    "install:client": "cd client && npm install",
-    "install:server": "cd server && npm install",
-    "install:all": "npm install && npm run install:client && npm run install:server"
+    "dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "preview": "cd client && npm run preview",
+    "install:all": "npm install && cd client && npm install"
   },
-  "devDependencies": {
-    "concurrently": "^9.2.1"
+  "dependencies": {
+    "mongodb": "^6.20.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
