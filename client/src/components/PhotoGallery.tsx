@@ -6,9 +6,9 @@ import kbxNTUImage from "@/assets/kbx-ntu.jpg";
 import kbxRingImage from "@/assets/kbx-ring.jpg";
 import sandaTeamImage from "@/assets/national-sanda.jpg";
 // Note: Using direct path for video due to MOV format handling
-const situpVideoPath = "@/assets/situp-ntumt.MOV";
-const boxingVideoPath = "@/assets/boxing.mp4";
-const bearcrawlVideoPath = "@/assets/bearcrawl.mp4";
+import situpVideoPath from "@/assets/situp-ntumt.mp4";
+import boxingVideoPath from "@/assets/boxing.mp4";
+import bearcrawlVideoPath from "@/assets/bearcrawl.mp4";
 
 const PhotoGallery = () => {
     const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set());
