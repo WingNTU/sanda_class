@@ -20,13 +20,13 @@ const Contact = () => {
       icon: MapPin,
       title: "Location",
       details: "May vary due to training venues \nLocation will be shared via Telegram",
-      action: "Get Directions"
+      // action: "Get Directions"
     },
     {
       icon: Clock,
       title: "Training Hours",
       details: "Sat-Sun: 530pm - 7pm \nTentative slots available",
-      action: "View Schedule"
+      // action: "View Schedule"
     }
   ];
 

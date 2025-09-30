@@ -2,7 +2,26 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Target } from "lucide-react";
 import heroImage from "@/assets/hero-sanda.jpg";
 
+
 const Hero = () => {
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const navHeight = 64; // Fixed navigation height (h-16 = 4rem = 64px)
+      const extraOffset = 20; // Additional offset to account for section padding
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight - extraOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const handleScrollToPrograms = () => {
+    smoothScrollTo('services');
+  };
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background Image */}
@@ -40,11 +59,11 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="hero" size="lg" className="group">
+            <Button variant="hero" size="lg" className="group" onClick={handleScrollToPrograms}>
               Book Your Session
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline-hero" size="lg">
+            <Button variant="outline-hero" size="lg" onClick={handleScrollToPrograms}>
               <Target className="w-5 h-5" />
               View Programs
             </Button>

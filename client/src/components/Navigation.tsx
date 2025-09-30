@@ -10,9 +10,14 @@ const Navigation = () => {
   const smoothScrollTo = (elementId: string) => {
     const element = document.getElementById(elementId);
     if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
+      const navHeight = 64; // Fixed navigation height (h-16 = 4rem = 64px)
+      const extraOffset = 20; // Additional offset to account for section padding
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight - extraOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
       });
     }
   };

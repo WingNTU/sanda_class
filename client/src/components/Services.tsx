@@ -8,20 +8,20 @@ const Services = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   const services = [
-    // {
-    //   icon: User,
-    //   title: "1-on-1 Personal Training",
-    //   price: "$80",
-    //   duration: "60 minutes",
-    //   description: "Personalized coaching focused on your specific goals and skill level",
-    //   features: [
-    //     "Custom training plan",
-    //     "Technique refinement",
-    //     "Competition preparation",
-    //     "Flexible scheduling"
-    //   ],
-    //   popular: false
-    // },
+    {
+      icon: User,
+      title: "1-on-1 Personal Training",
+      price: "$25",
+      duration: "60 minutes",
+      description: "Personalized coaching focused on your specific goals and skill level",
+      features: [
+        "Custom training plan",
+        "Technique refinement",
+        "Competition preparation",
+        "Travel flexibility, I come to you"
+      ],
+      popular: false
+    },
     {
       icon: Users,
       title: "Group Classes",
