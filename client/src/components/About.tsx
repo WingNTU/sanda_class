@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Trophy, Users, Zap, Shield } from "lucide-react";
+import coachImage from "@/assets/cermelang-bronze.jpg";
 
 const About = () => {
   const achievements = [
@@ -39,7 +40,7 @@ const About = () => {
               <div className="flex justify-center lg:justify-start">
                 <div className="w-80 h-80 rounded-lg overflow-hidden bg-gradient-card border border-border">
                   <img 
-                    src="src/assets/cermelang-bronze.jpg" 
+                    src={coachImage} 
                     alt="Wing - Sanda Coach" 
                     className="w-full h-full object-cover"
                     style={{ objectPosition: '50% 25%' }}
