@@ -29,6 +29,12 @@
     },
     "api/test-telegram.js": {
       "maxDuration": 30
+    },
+    "api/send-telegram.js": {
+      "maxDuration": 30
+    },
+    "api/telegram-users.js": {
+      "maxDuration": 20
     }
   }
 }

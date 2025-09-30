@@ -9,20 +9,6 @@ const Services = () => {
 
   const services = [
     {
-      icon: User,
-      title: "1-on-1 Personal Training",
-      price: "$25",
-      duration: "60 minutes",
-      description: "Personalized coaching focused on your specific goals and skill level",
-      features: [
-        "Custom training plan",
-        "Technique refinement",
-        "Competition preparation",
-        "Travel flexibility, I come to you"
-      ],
-      popular: false
-    },
-    {
       icon: Users,
       title: "Group Classes",
       price: "$50",
@@ -35,6 +21,20 @@ const Services = () => {
         "Regular class schedule"
       ],
       popular: true
+    },
+    {
+      icon: User,
+      title: "1-on-1 Personal Training",
+      price: "$80",
+      duration: "60 minutes",
+      description: "Personalized coaching focused on your specific goals and skill level\nCome to you at your convenience",
+      features: [
+        "Custom training plan",
+        "Technique refinement",
+        "Competition preparation",
+        "Travel flexibility, I come to you"
+      ],
+      popular: false
     },
     // {
     //   icon: Target,
@@ -88,17 +88,26 @@ const Services = () => {
                   <service.icon className="w-12 h-12 text-martial-gold mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
                   <div className="flex flex-col items-center gap-1 mb-2">
-                    <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-lg font-medium text-muted-foreground line-through">{service.price}</span>
-                      <span className="text-sm text-muted-foreground">/session</span>
-                    </div>
-                    <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-3xl font-bold text-martial-red">$35</span>
-                      <span className="text-muted-foreground">/session</span>
-                      <span className="ml-2 bg-martial-gold text-martial-dark px-2 py-1 rounded-full text-xs font-bold">
-                        SALE
-                      </span>
-                    </div>
+                    {service.title === "Group Classes" ? (
+                      <>
+                        <div className="flex items-baseline justify-center gap-1">
+                          <span className="text-lg font-medium text-muted-foreground line-through">{service.price}</span>
+                          <span className="text-sm text-muted-foreground">/session</span>
+                        </div>
+                        <div className="flex items-baseline justify-center gap-1">
+                          <span className="text-3xl font-bold text-martial-red">$35</span>
+                          <span className="text-muted-foreground">/session</span>
+                          <span className="ml-2 bg-martial-gold text-martial-dark px-2 py-1 rounded-full text-xs font-bold">
+                            SALE
+                          </span>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-3xl font-bold text-martial-red">{service.price}</span>
+                        <span className="text-muted-foreground">/session</span>
+                      </div>
+                    )}
                   </div>
                   <div className="flex items-center justify-center gap-2 text-muted-foreground">
                     <Clock className="w-4 h-4" />

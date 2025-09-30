@@ -111,7 +111,40 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
       });
 
       if (response.ok) {
-        alert('Booking request submitted successfully! I will contact you via Telegram soon.');
+        // Send confirmation message to user via Telegram
+        try {
+          const confirmationMessage = `🥊 *Booking Confirmation* 🥊\n\n` +
+            `Hi ${formData.name}! Your Sanda training session request has been received.\n\n` +
+            `📋 *Details:*\n` +
+            `• Program: ${formData.program}\n` +
+            `• Date: ${formData.selectedDate?.toLocaleDateString()}\n` +
+            `• Time: ${formData.timeSlot}\n` +
+            `${formData.remarks ? `• Notes: ${formData.remarks}\n` : ''}` +
+            `\n✅ I'll review your request and confirm the session details with you soon.\n` +
+            `💪 Looking forward to training with you!\n\n` +
+            `- Wing (Sanda Coach)`;
+
+          const telegramResponse = await fetch(apiEndpoint.replace('/bookings', '/send-telegram'), {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              telegramHandle: formData.telegramHandle,
+              message: confirmationMessage
+            }),
+          });
+
+          if (telegramResponse.ok) {
+            alert('Booking request submitted successfully! Check your Telegram for a confirmation message.');
+          } else {
+            alert('Booking request submitted successfully! I will contact you via Telegram soon.');
+          }
+        } catch (telegramError) {
+          console.error('Telegram confirmation error:', telegramError);
+          alert('Booking request submitted successfully! I will contact you via Telegram soon.');
+        }
+
         onClose();
         // Reset form
         setFormData({
