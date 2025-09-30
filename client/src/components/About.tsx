@@ -36,7 +36,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
               About Your Coach
             </h2>
-            <div className="grid lg:grid-cols-2 gap-4 items-center">
+            <div className="grid lg:grid-cols-2 gap-2 items-center">
               {/* Coach Image */}
               <div className="flex justify-center lg:justify-start">
                 <div className="w-80 h-80 rounded-lg overflow-hidden bg-gradient-card border border-border">
