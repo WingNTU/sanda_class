@@ -118,7 +118,8 @@ export default async function handler(req, res) {
     } catch (error) {
       console.error('Booking API error:', error);
       res.status(500).json({ 
-        error: 'Internal server error. Please try again later.' 
+        error: 'Internal server error. Please try again later.',
+        details: process.env.NODE_ENV === 'development' ? error.message : undefined
       });
     }
   } else if (req.method === 'GET') {

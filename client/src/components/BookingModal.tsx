@@ -114,11 +114,13 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
           remarks: ""
         });
       } else {
-        throw new Error('Failed to submit booking');
+        const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
+        throw new Error(errorData.error || `HTTP ${response.status}: ${response.statusText}`);
       }
     } catch (error) {
       console.error('Booking submission error:', error);
-      alert('Failed to submit booking. Please try again.');
+      const errorMessage = error.message || 'Failed to submit booking. Please try again.';
+      alert(`Booking failed: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
     }
