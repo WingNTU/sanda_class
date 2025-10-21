@@ -19,15 +19,16 @@ async function sendTelegramNotification(bookingData) {
     const message = `🥋 *New Sanda Class Booking!*\n\n` +
       `👤 *Name:* ${bookingData.name}\n` +
       `📱 *Telegram:* ${bookingData.telegramHandle}\n` +
-      `📅 *Date:* ${new Date(bookingData.selectedDate).toLocaleDateString('en-US', {
+      `📅 *Date:* ${new Date(bookingData.selectedDate).toLocaleDateString('en-SG', {
         weekday: 'long',
         year: 'numeric',
         month: 'long',
-        day: 'numeric'
+        day: 'numeric',
+        timeZone: 'Asia/Singapore'
       })}\n` +
       `⏰ *Time:* ${bookingData.timeSlot}\n` +
       `📝 *Remarks:* ${bookingData.remarks || 'None'}\n` +
-      `🕐 *Submitted:* ${new Date().toLocaleString()}`;
+      `🕐 *Submitted:* ${new Date().toLocaleString('en-SG', { timeZone: 'Asia/Singapore' })}`;
 
     const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
     const response = await fetch(telegramUrl, {
@@ -94,7 +95,7 @@ export default async function handler(req, res) {
         name: bookingData.name.trim(),
         telegramHandle: bookingData.telegramHandle.trim(),
         selectedDate: new Date(bookingData.selectedDate).toISOString(),
-        timeSlot: bookingData.timeSlot || '5:00 PM - 7:30 PM',
+        timeSlot: bookingData.timeSlot || '5:30 PM - 7:00 PM',
         remarks: bookingData.remarks || '',
         submittedAt: new Date().toISOString(),
         status: 'pending'
