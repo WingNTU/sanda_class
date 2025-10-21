@@ -27,9 +27,6 @@
     "api/health.js": {
       "maxDuration": 10
     },
-    "api/test-telegram.js": {
-      "maxDuration": 30
-    },
     "api/send-telegram.js": {
       "maxDuration": 30
     },
