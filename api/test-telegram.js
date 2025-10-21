@@ -11,15 +11,16 @@ async function sendTelegramNotification(bookingData) {
   const message = `🥋 *Test Sanda Class Booking!*\n\n` +
     `👤 *Name:* ${bookingData.name}\n` +
     `📱 *Telegram:* ${bookingData.telegramHandle}\n` +
-    `📅 *Date:* ${new Date(bookingData.selectedDate).toLocaleDateString('en-US', {
+    `📅 *Date:* ${new Date(bookingData.selectedDate).toLocaleDateString('en-SG', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
+      timeZone: 'Asia/Singapore'
     })}\n` +
     `⏰ *Time:* ${bookingData.timeSlot}\n` +
     `📝 *Remarks:* ${bookingData.remarks || 'None'}\n` +
-    `🕐 *Submitted:* ${new Date().toLocaleString()}`;
+    `🕐 *Submitted:* ${new Date().toLocaleString('en-SG', { timeZone: 'Asia/Singapore' })}`;
 
   const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
   const response = await fetch(telegramUrl, {
