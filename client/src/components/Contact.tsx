@@ -14,18 +14,18 @@ const Contact = () => {
       icon: Instagram,
       title: "Instagram",
       details: "check out more sanda contents @hoawing",
-      action: "Send Message"
+      action: "Find out more"
     },
     {
       icon: MapPin,
       title: "Location",
-      details: "May vary due to training venues \nLocation will be shared via Telegram",
-      // action: "Get Directions"
+      details: "Keiseikan Martial Arts Gym @ 342D King George's Ave, Singapore 208575",
+      action: "Get Directions"
     },
     {
       icon: Clock,
       title: "Training Hours",
-      details: "Sat-Sun: 530pm - 7pm \nTentative slots available",
+      details: "Sat: 5pm - 6.30pm \nTentative slots available\n Beginner Classes on Saturdays",
       // action: "View Schedule"
     }
   ];
@@ -63,8 +63,13 @@ const Contact = () => {
                       // Telegram contact
                       window.open('https://t.me/wingbae', '_blank');
                     } else if (index === 1) {
-                      // Email contact
+                      // Instagram contact
                       window.open('https://www.instagram.com/hoawing', '_blank');
+                    } else if (index === 2) {
+                      // Google Maps directions
+                      const address = 'Keiseikan Martial Arts Gym, 342D King George\'s Ave, Singapore 208575';
+                      const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+                      window.open(googleMapsUrl, '_blank');
                     }
                   }}
                 >
