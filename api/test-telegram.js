@@ -60,7 +60,7 @@ export default async function handler(req, res) {
         name: 'Test User',
         telegramHandle: '@testuser',
         selectedDate: new Date().toISOString(),
-        timeSlot: '5:00 PM - 7:30 PM',
+        timeSlot: '5:30 PM - 7:00 PM',
         remarks: 'This is a test notification from Vercel'
       };
       
