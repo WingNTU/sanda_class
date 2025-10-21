@@ -16,7 +16,8 @@ async function sendTelegramNotification(bookingData) {
   }
 
   try {
-    const message = `🥋 *New Sanda Class Booking!*\n\n` +
+    const message = 
+      `🥋 *Thank you for booking with Wing!*\n\n` +
       `👤 *Name:* ${bookingData.name}\n` +
       `📱 *Telegram:* ${bookingData.telegramHandle}\n` +
       `📅 *Date:* ${new Date(bookingData.selectedDate).toLocaleDateString('en-SG', {
@@ -28,7 +29,13 @@ async function sendTelegramNotification(bookingData) {
       })}\n` +
       `⏰ *Time:* ${bookingData.timeSlot}\n` +
       `📝 *Remarks:* ${bookingData.remarks || 'None'}\n` +
-      `🕐 *Submitted:* ${new Date().toLocaleString('en-SG', { timeZone: 'Asia/Singapore' })}`;
+      `🕐 *Submitted:* ${new Date().toLocaleString('en-SG', { timeZone: 'Asia/Singapore' })}\n` +
+      `\nThings to bring along:\n` +
+      `- Comfortable workout attire\n` +
+      `- Boxing gloves + hand wraps + shinpads (if you have them)\n` +
+      `- Water bottle\n` +
+      `- Positive attitude!\n\n` +
+      `Looking forward to seeing you then! 👊`;
 
     const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
     const response = await fetch(telegramUrl, {
