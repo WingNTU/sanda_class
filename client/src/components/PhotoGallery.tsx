@@ -5,15 +5,24 @@ import kbxBoysImage from "@/assets/kbx-boys.jpg";
 import kbxNTUImage from "@/assets/kbx-ntu.jpg";
 import kbxRingImage from "@/assets/kbx-ring.jpg";
 import sandaTeamImage from "@/assets/national-sanda.jpg";
+import pestasukan1Image from "@/assets/pestasukan1.jpg";
 // Note: Using direct path for video due to MOV format handling
 import situpVideoPath from "@/assets/situp-ntumt.mp4";
 import boxingVideoPath from "@/assets/boxing.mp4";
 import bearcrawlVideoPath from "@/assets/bearcrawl.mp4";
+import noodleBoxingVideoPath from "@/assets/firstclassboxing.mp4";
+
 
 const PhotoGallery = () => {
     const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set());
     
     const photos = [
+        {
+        src: noodleBoxingVideoPath,
+        alt: "Beginner class - noodle boxing session",
+        caption: "Noodle boxing session",
+        type: "video"
+        },
         {
         src: kbxBoysImage,
         alt: "Group photo with supporters at KBX event",
@@ -55,6 +64,12 @@ const PhotoGallery = () => {
         alt: "Training session - bear crawl workout",
         caption: "Bear crawl training session",
         type: "video"
+        },
+        {
+        src: pestasukan1Image,
+        alt: "Pesta Sukan Team Photo 2024",
+        caption: "Pesta Sukan Team Photo 2024",
+        type: "image"
         },
         
         // Add more photos here as needed
