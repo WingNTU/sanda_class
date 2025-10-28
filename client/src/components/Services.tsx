@@ -11,7 +11,7 @@ const Services = () => {
     {
       icon: Users,
       title: "Group Classes",
-      price: "$25",
+      price: "$50",
       duration: "90 minutes",
       description: "Train in a supportive group environment while receiving personalized attention",
       features: [
