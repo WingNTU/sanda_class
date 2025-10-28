@@ -68,11 +68,11 @@ const Services = () => {
           </div>
           
           {/* Services Grid */}
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <div className="flex justify-center mb-16">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className={`relative p-8 bg-gradient-card border-border hover:shadow-card transition-all duration-300 ${
+                className={`relative p-8 bg-gradient-card border-border hover:shadow-card transition-all duration-300 w-full max-w-lg ${
                   service.popular ? 'ring-2 ring-martial-red shadow-glow' : ''
                 }`}
               >
@@ -95,7 +95,7 @@ const Services = () => {
                           <span className="text-sm text-muted-foreground">/session</span>
                         </div>
                         <div className="flex items-baseline justify-center gap-1">
-                          <span className="text-3xl font-bold text-martial-red">$35</span>
+                          <span className="text-3xl font-bold text-martial-red">$25</span>
                           <span className="text-muted-foreground">/session</span>
                           <span className="ml-2 bg-martial-gold text-martial-dark px-2 py-1 rounded-full text-xs font-bold">
                             SALE
