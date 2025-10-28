@@ -1,11 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Camera, Image, Play, Pause } from "lucide-react";
 import { useState, useRef } from "react";
-import kbxBoysImage from "@/assets/kbx-boys.jpg";
-import kbxNTUImage from "@/assets/kbx-ntu.jpg";
-import kbxRingImage from "@/assets/kbx-ring.jpg";
 import sandaTeamImage from "@/assets/national-sanda.jpg";
-import pestasukan1Image from "@/assets/pestasukan1.jpg";
+import firstClassShoulderTapImage from "@/assets/firstclassshouldertap.jpg";
 // Note: Using direct path for video due to MOV format handling
 import situpVideoPath from "@/assets/situp-ntumt.mp4";
 import boxingVideoPath from "@/assets/boxing.mp4";
@@ -18,28 +15,16 @@ const PhotoGallery = () => {
     
     const photos = [
         {
+        src: firstClassShoulderTapImage,
+        alt: "Shoulder tap drill during beginner class",
+        caption: "Shoulder tap drill during beginner class",
+        type: "image"
+        },
+        {
         src: noodleBoxingVideoPath,
         alt: "Beginner class - noodle boxing session",
         caption: "Noodle boxing session",
         type: "video"
-        },
-        {
-        src: kbxBoysImage,
-        alt: "Group photo with supporters at KBX event",
-        caption: "Da boys came to support the KBX fighters",
-        type: "image"
-        },
-        {
-        src: kbxNTUImage,
-        alt: "NTUMT members at martial arts event",
-        caption: "NTUMT members coming down to support our fighters",
-        type: "image"
-        },
-        {
-        src: kbxRingImage,
-        alt: "KBX competition ring and venue",
-        caption: "KBX Event",
-        type: "image"
         },
         {
         src: situpVideoPath,
@@ -65,13 +50,6 @@ const PhotoGallery = () => {
         caption: "Bear crawl training session",
         type: "video"
         },
-        {
-        src: pestasukan1Image,
-        alt: "Pesta Sukan Team Photo 2024",
-        caption: "Pesta Sukan Team Photo 2024",
-        type: "image"
-        },
-        
         // Add more photos here as needed
     ];
 

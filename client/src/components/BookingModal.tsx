@@ -232,16 +232,10 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                 <SelectValue placeholder="Choose a training program" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="1-on-1 Personal Training">
-                  <div className="flex flex-col">
-                    <span className="font-medium">1-on-1 Personal Training</span>
-                    <span className="text-sm text-muted-foreground">$25/session • 60 minutes • Personalized coaching</span>
-                  </div>
-                </SelectItem>
                 <SelectItem value="Group Classes">
                   <div className="flex flex-col">
                     <span className="font-medium">Group Classes</span>
-                    <span className="text-sm text-muted-foreground">$35/session • 90 minutes • Shared learning experience</span>
+                    <span className="text-sm text-muted-foreground">$25/session • 90 minutes • Shared learning experience</span>
                   </div>
                 </SelectItem>
               </SelectContent>
@@ -279,7 +273,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
             <Card className="p-4 bg-muted/20">
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-martial-red" />
-                <span className="font-medium">Saturday & Sunday: 5:30 PM - 7:00 PM</span>
+                <span className="font-medium">Saturday: 5:30 PM - 7:00 PM</span>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
                 All sessions are 90mins long with personalized attention in a small group setting
