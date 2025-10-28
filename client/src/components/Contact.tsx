@@ -19,7 +19,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: "Keiseikan Martial Arts Gym @ 342D King George's Ave, Singapore 208575",
+      details: "Keiseikan Martial Arts Gym @ 342D King George's Ave, Singapore 208575\nBlk342D Level 4",
       action: "Get Directions"
     },
     {

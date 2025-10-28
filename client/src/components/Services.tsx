@@ -11,7 +11,7 @@ const Services = () => {
     {
       icon: Users,
       title: "Group Classes",
-      price: "$50",
+      price: "$25",
       duration: "90 minutes",
       description: "Train in a supportive group environment while receiving personalized attention",
       features: [
@@ -21,21 +21,21 @@ const Services = () => {
         "Regular class schedule"
       ],
       popular: true
-    },
-    {
-      icon: User,
-      title: "1-on-1 Personal Training",
-      price: "$80",
-      duration: "60 minutes",
-      description: "Personalized coaching focused on your specific goals and skill level\nCome to you at your convenience",
-      features: [
-        "Custom training plan",
-        "Technique refinement",
-        "Competition preparation",
-        "Travel flexibility, I come to you"
-      ],
-      popular: false
-    },
+    }
+    // {
+    //   icon: User,
+    //   title: "1-on-1 Personal Training",
+    //   price: "$80",
+    //   duration: "60 minutes",
+    //   description: "Personalized coaching focused on your specific goals and skill level\nCome to you at your convenience",
+    //   features: [
+    //     "Custom training plan",
+    //     "Technique refinement",
+    //     "Competition preparation",
+    //     "Travel flexibility, I come to you"
+    //   ],
+    //   popular: false
+    // },
     // {
     //   icon: Target,
     //   title: "Competition Prep",
