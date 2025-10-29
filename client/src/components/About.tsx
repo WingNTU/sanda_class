@@ -86,6 +86,11 @@ const About = () => {
                 my personalized training programs will help you achieve your goals safely 
                 and effectively.
               </p>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Compared to other Combat Sports like Muaythai and Boxing, Sanda primarily focuses on
+                getting points through clean strikes and takedowns rather than inflicting damage.
+                This makes <span className="font-bold">Sanda</span> a safer and more approachable martial art for individuals of all ages and fitness levels.
+              </p>
             </div>
             
             {/* Achievements Grid */}
