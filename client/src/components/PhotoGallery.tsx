@@ -8,12 +8,25 @@ import situpVideoPath from "@/assets/situp-ntumt.mp4";
 import boxingVideoPath from "@/assets/boxing.mp4";
 import bearcrawlVideoPath from "@/assets/bearcrawl.mp4";
 import noodleBoxingVideoPath from "@/assets/firstclassboxing.mp4";
-
+import firstClass1VideoPath from "@/assets/firstclass1.mp4";
+import firstClass2VideoPath from "@/assets/firstclass2.mp4";
 
 const PhotoGallery = () => {
     const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set());
     
     const photos = [
+        {
+        src: firstClass2VideoPath,
+        alt: "Beginner class - Partner drill",
+        caption: "Partner drill",
+        type: "video"
+        },
+        {
+        src: firstClass1VideoPath,
+        alt: "Beginner class - Speed punching drill",
+        caption: "Speed punching drill",
+        type: "video"
+        },
         {
         src: firstClassShoulderTapImage,
         alt: "Shoulder tap drill during beginner class",
