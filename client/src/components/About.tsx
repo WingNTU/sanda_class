@@ -34,7 +34,7 @@ const About = () => {
           {/* Section Header */}
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-              About Your Coach
+              About Your Trainer
             </h2>
             <div className="grid lg:grid-cols-2 gap-2 items-center">
               {/* Coach Image */}
@@ -42,7 +42,7 @@ const About = () => {
                 <div className="w-80 h-80 rounded-lg overflow-hidden bg-gradient-card border border-border">
                   <img 
                     src={coachImage} 
-                    alt="Wing - Sanda Coach" 
+                    alt="Wing - Sanda Trainer" 
                     className="w-full h-full object-cover"
                     style={{ objectPosition: '50% 25%' }}
                   />
@@ -85,6 +85,11 @@ const About = () => {
                 Whether you're a complete beginner or looking to refine your technique, 
                 my personalized training programs will help you achieve your goals safely 
                 and effectively.
+              </p>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Compared to other Combat Sports like Muaythai and Boxing, Sanda primarily focuses on
+                getting points through clean strikes and takedowns rather than inflicting damage.
+                This makes <span className="font-bold">Sanda</span> a safer and more approachable martial art for individuals of all ages and fitness levels.
               </p>
             </div>
             

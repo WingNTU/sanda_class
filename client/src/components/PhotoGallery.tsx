@@ -1,36 +1,43 @@
 import { Card } from "@/components/ui/card";
 import { Camera, Image, Play, Pause } from "lucide-react";
 import { useState, useRef } from "react";
-import kbxBoysImage from "@/assets/kbx-boys.jpg";
-import kbxNTUImage from "@/assets/kbx-ntu.jpg";
-import kbxRingImage from "@/assets/kbx-ring.jpg";
 import sandaTeamImage from "@/assets/national-sanda.jpg";
+import firstClassShoulderTapImage from "@/assets/firstclassshouldertap.jpg";
 // Note: Using direct path for video due to MOV format handling
 import situpVideoPath from "@/assets/situp-ntumt.mp4";
 import boxingVideoPath from "@/assets/boxing.mp4";
 import bearcrawlVideoPath from "@/assets/bearcrawl.mp4";
+import noodleBoxingVideoPath from "@/assets/firstclassboxing.mp4";
+import firstClass1VideoPath from "@/assets/firstclass1.mp4";
+import firstClass2VideoPath from "@/assets/firstclass2.mp4";
 
 const PhotoGallery = () => {
     const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set());
     
     const photos = [
         {
-        src: kbxBoysImage,
-        alt: "Group photo with supporters at KBX event",
-        caption: "Da boys came to support the KBX fighters",
+        src: firstClass2VideoPath,
+        alt: "Beginner class - Partner drill",
+        caption: "Partner drill",
+        type: "video"
+        },
+        {
+        src: firstClass1VideoPath,
+        alt: "Beginner class - Speed punching drill",
+        caption: "Speed punching drill",
+        type: "video"
+        },
+        {
+        src: firstClassShoulderTapImage,
+        alt: "Shoulder tap drill during beginner class",
+        caption: "Shoulder tap drill during beginner class",
         type: "image"
         },
         {
-        src: kbxNTUImage,
-        alt: "NTUMT members at martial arts event",
-        caption: "NTUMT members coming down to support our fighters",
-        type: "image"
-        },
-        {
-        src: kbxRingImage,
-        alt: "KBX competition ring and venue",
-        caption: "KBX Event",
-        type: "image"
+        src: noodleBoxingVideoPath,
+        alt: "Beginner class - noodle boxing session",
+        caption: "Noodle boxing session",
+        type: "video"
         },
         {
         src: situpVideoPath,
@@ -56,7 +63,6 @@ const PhotoGallery = () => {
         caption: "Bear crawl training session",
         type: "video"
         },
-        
         // Add more photos here as needed
     ];
 
