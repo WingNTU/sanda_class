@@ -234,14 +234,14 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
               <SelectContent>
                 <SelectItem value="Group Classes">
                   <div className="flex flex-col">
-                    <span className="font-medium">Group Classes</span>
-                    <span className="text-sm text-muted-foreground">$35/session • 90 minutes • Shared learning experience</span>
+                    <span className="font-medium"><br />Group Classes</span>
+                    <span className="text-sm text-muted-foreground">$35/session • 90 minutes • Shared learning experience<br /></span>
                   </div>
                 </SelectItem>
                 <SelectItem value="Trial Class">
                   <div className="flex flex-col">
-                    <span className="font-medium">Trial Class</span>
-                    <span className="text-sm text-muted-foreground">First timer? It's free! Come and experience how a group sanda class works.</span>
+                    <span className="font-medium"><br />Trial Class</span>
+                    <span className="text-sm text-muted-foreground">First timer? It's free! Come and experience how a group sanda class works.<br /></span>
                   </div>
                 </SelectItem>
               </SelectContent>
