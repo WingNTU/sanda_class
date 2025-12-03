@@ -10,6 +10,10 @@ import bearcrawlVideoPath from "@/assets/bearcrawl.mp4";
 import noodleBoxingVideoPath from "@/assets/firstclassboxing.mp4";
 import firstClass1VideoPath from "@/assets/firstclass1.mp4";
 import firstClass2VideoPath from "@/assets/firstclass2.mp4";
+import beginnerPadworkVideoPath from "@/assets/padwork_beginner.mp4";
+import confidentDrillVideoPath from "@/assets/confidence_drill.mp4";
+import beginnerBagworkVideoPath from "@/assets/bagwork_beginner.mp4";
+
 
 const PhotoGallery = () => {
     const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set());
@@ -61,6 +65,24 @@ const PhotoGallery = () => {
         src: bearcrawlVideoPath,
         alt: "Training session - bear crawl workout",
         caption: "Bear crawl training session",
+        type: "video"
+        },
+        {
+        src: beginnerPadworkVideoPath,
+        alt: "Training session - beginner padwork workout",
+        caption: "Beginner padwork training session",
+        type: "video"
+        },
+        {
+        src: confidentDrillVideoPath,
+        alt: "Training session - confidence drill workout",
+        caption: "Confidence drill training session",
+        type: "video"
+        },
+        {
+        src: beginnerBagworkVideoPath,
+        alt: "Training session - beginner bagwork workout",
+        caption: "Beginner bagwork training session",
         type: "video"
         },
         // Add more photos here as needed

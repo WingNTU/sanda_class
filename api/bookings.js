@@ -32,9 +32,11 @@ async function sendTelegramNotification(bookingData) {
       `🕐 *Submitted:* ${new Date().toLocaleString('en-SG', { timeZone: 'Asia/Singapore' })}\n` +
       `\nThings to bring along:\n` +
       `- Comfortable workout attire\n` +
-      `- Boxing gloves + hand wraps + shinpads (if you have them)\n` +
+      `- Boxing gloves + hand wraps + shinpads\n` +
       `- Water bottle\n` +
       `- Positive attitude!\n\n` +
+      `Shower facilities are available at the venue. 100+ are sold separately as well.\n\n` +
+      `To confirm booking, please reply a screenshot of your payment to this chat via PayNow/Paylah @ 93747671.\n\n` +
       `Looking forward to seeing you then! 👊`;
 
     const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;

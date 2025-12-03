@@ -95,7 +95,7 @@ const Services = () => {
                           <span className="text-sm text-muted-foreground">/session</span>
                         </div>
                         <div className="flex items-baseline justify-center gap-1">
-                          <span className="text-3xl font-bold text-martial-red">$25</span>
+                          <span className="text-3xl font-bold text-martial-red">$35</span>
                           <span className="text-muted-foreground">/session</span>
                           <span className="ml-2 bg-martial-gold text-martial-dark px-2 py-1 rounded-full text-xs font-bold">
                             SALE

@@ -235,7 +235,13 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                 <SelectItem value="Group Classes">
                   <div className="flex flex-col">
                     <span className="font-medium">Group Classes</span>
-                    <span className="text-sm text-muted-foreground">$25/session • 90 minutes • Shared learning experience</span>
+                    <span className="text-sm text-muted-foreground">$35/session • 90 minutes • Shared learning experience</span>
+                  </div>
+                </SelectItem>
+                <SelectItem value="Trial Class">
+                  <div className="flex flex-col">
+                    <span className="font-medium">Trial Class</span>
+                    <span className="text-sm text-muted-foreground">First timer? It's free! Come and experience how a group sanda class works.</span>
                   </div>
                 </SelectItem>
               </SelectContent>
@@ -293,6 +299,14 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
               placeholder="Any specific goals, experience level, or questions you'd like to share..."
               rows={4}
             />
+          </div>
+
+          {/* confirm booking */}
+          <div>
+            <p className="text-sm text-muted-foreground">
+              By submitting this booking request, a telegram confirmation message will be sent to your provided handle. 
+              Payment to be made upon confirmation of the session.
+            </p>
           </div>
 
           {/* Form Actions */}
