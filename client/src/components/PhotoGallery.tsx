@@ -56,18 +56,6 @@ const PhotoGallery = () => {
         type: "image"
         },
         {
-        src: boxingVideoPath,
-        alt: "Training session - boxing workout",
-        caption: "Boxing training session",
-        type: "video"
-        },
-        {
-        src: bearcrawlVideoPath,
-        alt: "Training session - bear crawl workout",
-        caption: "Bear crawl training session",
-        type: "video"
-        },
-        {
         src: beginnerPadworkVideoPath,
         alt: "Training session - beginner padwork workout",
         caption: "Beginner padwork training session",
@@ -85,6 +73,18 @@ const PhotoGallery = () => {
         caption: "Beginner bagwork training session",
         type: "video"
         },
+        {
+        src: boxingVideoPath,
+        alt: "Training session - boxing workout",
+        caption: "Boxing training session",
+        type: "video"
+        },
+        {
+        src: bearcrawlVideoPath,
+        alt: "Training session - bear crawl workout",
+        caption: "Bear crawl training session",
+        type: "video"
+        }
         // Add more photos here as needed
     ];
 
