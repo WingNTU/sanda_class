@@ -20,7 +20,6 @@ interface BookingData {
   program: string;
   selectedDate: Date | null;
   timeSlot: string;
-  remarks: string;
 }
 
 interface FormErrors {
@@ -29,7 +28,6 @@ interface FormErrors {
   program?: string;
   selectedDate?: string;
   timeSlot?: string;
-  remarks?: string;
 }
 
 const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
@@ -38,8 +36,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
     telegramHandle: "",
     program: "Group Classes",
     selectedDate: null,
-    timeSlot: "5:30 PM - 7:00 PM",
-    remarks: ""
+    timeSlot: "5:30 PM - 7:00 PM"
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
@@ -119,7 +116,6 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
             `• Program: ${formData.program}\n` +
             `• Date: ${formData.selectedDate?.toLocaleDateString()}\n` +
             `• Time: ${formData.timeSlot}\n` +
-            `${formData.remarks ? `• Notes: ${formData.remarks}\n` : ''}` +
             `\n✅ I'll review your request and confirm the session details with you soon.\n` +
             `💪 Looking forward to training with you!\n\n` +
             `- Wing (Sanda Coach)`;
@@ -152,8 +148,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
           telegramHandle: "",
           program: "Group Classes",
           selectedDate: null,
-          timeSlot: "5:30 PM - 7:00 PM",
-          remarks: ""
+          timeSlot: "5:30 PM - 7:00 PM"
         });
       } else {
         const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
@@ -232,16 +227,22 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                 <SelectValue placeholder="Choose a training program" />
               </SelectTrigger>
               <SelectContent>
+                <SelectItem value="1-on-1 Personal Training">
+                  <div className="flex flex-col">
+                    <span className="font-medium">1-on-1 Personal Training</span>
+                    <span className="text-sm text-muted-foreground">$100/session • 60 minutes • Personalized coaching</span>
+                  </div>
+                </SelectItem>
                 <SelectItem value="Group Classes">
                   <div className="flex flex-col">
                     <span className="font-medium">Group Classes</span>
                     <span className="text-sm text-muted-foreground">$35/session • 90 minutes • Shared learning experience</span>
                   </div>
                 </SelectItem>
-                <SelectItem value="Trial Class">
+                <SelectItem value="Free Trial Classes">
                   <div className="flex flex-col">
-                    <span className="font-medium">Trial Class</span>
-                    <span className="text-sm text-muted-foreground">First timer? It's free! Come and experience how a group sanda class works.</span>
+                    <span className="font-medium">Free Trial Classes</span>
+                    <span className="text-sm text-muted-foreground">2x Free trial class • 90 minutes • No obligation</span>
                   </div>
                 </SelectItem>
               </SelectContent>
@@ -285,20 +286,6 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                 All sessions are 90mins long with personalized attention in a small group setting
               </p>
             </Card>
-          </div>
-
-          {/* Remarks */}
-          <div className="space-y-2">
-            <Label htmlFor="remarks">
-              Additional Remarks (Optional)
-            </Label>
-            <Textarea
-              id="remarks"
-              value={formData.remarks}
-              onChange={(e) => setFormData(prev => ({ ...prev, remarks: e.target.value }))}
-              placeholder="Any specific goals, experience level, or questions you'd like to share..."
-              rows={4}
-            />
           </div>
 
           {/* confirm booking */}

@@ -71,8 +71,8 @@ const Services = () => {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className={`relative p-8 bg-gradient-card border-border hover:shadow-card transition-all duration-300 w-full max-w-lg ${
-                  service.popular ? 'ring-2 ring-martial-red shadow-glow' : ''
+                className={`relative p-8 bg-gradient-card hover:shadow-card transition-all duration-300 w-full max-w-lg ${
+                  service.popular ? 'border-2 border-martial-red shadow-glow' : 'border-border'
                 }`}
               >
                 {service.popular && (
