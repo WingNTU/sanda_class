@@ -37,10 +37,10 @@ const Services = () => {
     },
     {
       icon: Users,
-      title: "Free Trial Classes",
+      title: "2x Trial Classes",
       price: "$50",
       duration: "90 minutes",
-      description: "2x Free trial class to experience the training environment and coaching style",
+      description: "2x Trial classes to experience the training environment and coaching style",
       features: [
         "Experience group dynamics",
         "Discover passion for Sanda",
@@ -61,7 +61,7 @@ const Services = () => {
               Training Programs
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              First Timer? Looking for free trials? We offer 2x free trials classes! Join us! <br /> 
+              First Timer? Looking for trial classes? We offer 2x trial classes at a lower price! Join us! <br /> 
               All programs include comprehensive Sanda technique instruction.
             </p>
           </div>
