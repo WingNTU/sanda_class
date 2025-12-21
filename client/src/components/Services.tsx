@@ -21,35 +21,34 @@ const Services = () => {
         "Regular class schedule"
       ],
       popular: true
+    },
+    {
+      icon: User,
+      title: "1-on-1 Personal Training",
+      price: "$100",
+      duration: "60 minutes",
+      description: "Personalized coaching focused on your specific goals and skill level\nCome to you at your convenience",
+      features: [
+        "Custom training plan",
+        "Technique refinement",
+        "Competition preparation",
+      ],
+      popular: false
+    },
+    {
+      icon: Users,
+      title: "Free Trial Classes",
+      price: "$50",
+      duration: "90 minutes",
+      description: "2x Free trial class to experience the training environment and coaching style",
+      features: [
+        "Experience group dynamics",
+        "Discover passion for Sanda",
+        "Meet the community and coaches",
+        "No obligation to continue"
+      ],
+      popular: false
     }
-    // {
-    //   icon: User,
-    //   title: "1-on-1 Personal Training",
-    //   price: "$80",
-    //   duration: "60 minutes",
-    //   description: "Personalized coaching focused on your specific goals and skill level\nCome to you at your convenience",
-    //   features: [
-    //     "Custom training plan",
-    //     "Technique refinement",
-    //     "Competition preparation",
-    //     "Travel flexibility, I come to you"
-    //   ],
-    //   popular: false
-    // },
-    // {
-    //   icon: Target,
-    //   title: "Competition Prep",
-    //   price: "$100",
-    //   duration: "90 minutes",
-    //   description: "Intensive training for athletes preparing for Sanda competitions",
-    //   features: [
-    //     "Advanced techniques",
-    //     "Fight strategy",
-    //     "Mental preparation",
-    //     "Video analysis"
-    //   ],
-    //   popular: false
-    // }
   ];
 
   return (
@@ -62,7 +61,7 @@ const Services = () => {
               Training Programs
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              For now, I offer small group classes to provide personalized attention in a collaborative setting. <br /> 
+              First Timer? Looking for free trials? We offer 2x free trials classes! Join us! <br /> 
               All programs include comprehensive Sanda technique instruction.
             </p>
           </div>
