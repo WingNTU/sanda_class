@@ -20,6 +20,7 @@ async function sendTelegramNotification(bookingData) {
       `🥋 *Thank you for booking with Wing!*\n\n` +
       `👤 *Name:* ${bookingData.name}\n` +
       `📱 *Telegram:* ${bookingData.telegramHandle}\n` +
+      `🎯 *Program:* ${bookingData.program}\n` +
       `📅 *Date:* ${new Date(bookingData.selectedDate).toLocaleDateString('en-SG', {
         weekday: 'long',
         year: 'numeric',
@@ -28,7 +29,6 @@ async function sendTelegramNotification(bookingData) {
         timeZone: 'Asia/Singapore'
       })}\n` +
       `⏰ *Time:* ${bookingData.timeSlot}\n` +
-      `📝 *Remarks:* ${bookingData.remarks || 'None'}\n` +
       `🕐 *Submitted:* ${new Date().toLocaleString('en-SG', { timeZone: 'Asia/Singapore' })}\n` +
       `\nThings to bring along:\n` +
       `- Comfortable workout attire\n` +
@@ -103,6 +103,7 @@ export default async function handler(req, res) {
       const bookingDocument = {
         name: bookingData.name.trim(),
         telegramHandle: bookingData.telegramHandle.trim(),
+        program: bookingData.program || 'Group Classes',
         selectedDate: new Date(bookingData.selectedDate).toISOString(),
         timeSlot: bookingData.timeSlot || '5:30 PM - 7:00 PM',
         remarks: bookingData.remarks || '',
