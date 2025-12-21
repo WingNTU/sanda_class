@@ -9,6 +9,19 @@ const Services = () => {
 
   const services = [
     {
+      icon: User,
+      title: "1-on-1 Personal Training",
+      price: "$100",
+      duration: "60 minutes",
+      description: "Personalized coaching focused on your specific goals and skill level\nCome to you at your convenience",
+      features: [
+        "Custom training plan",
+        "Technique refinement",
+        "Competition preparation",
+      ],
+      popular: false
+    },
+    {
       icon: Users,
       title: "Group Classes",
       price: "$50",
@@ -21,19 +34,6 @@ const Services = () => {
         "Regular class schedule"
       ],
       popular: true
-    },
-    {
-      icon: User,
-      title: "1-on-1 Personal Training",
-      price: "$100",
-      duration: "60 minutes",
-      description: "Personalized coaching focused on your specific goals and skill level\nCome to you at your convenience",
-      features: [
-        "Custom training plan",
-        "Technique refinement",
-        "Competition preparation",
-      ],
-      popular: false
     },
     {
       icon: Users,
