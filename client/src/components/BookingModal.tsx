@@ -242,7 +242,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
                 <SelectItem value="Trial Classes">
                   <div className="flex flex-col">
                     <span className="font-medium">2x Trial Classes</span>
-                    <span className="text-sm text-muted-foreground">2x Trial classes • 90 minutes • No obligation</span>
+                    <span className="text-sm text-muted-foreground">2x Trial classes @ $50 • 90 minutes • No obligation</span>
                   </div>
                 </SelectItem>
               </SelectContent>
