@@ -46,7 +46,7 @@ const Navigation = () => {
             <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-foreground" />
             </div>
-            <span className="text-xl font-bold text-foreground">Sanda</span>
+            <span className="text-xl font-bold text-foreground">SKG</span>
           </div>
           
           {/* Desktop Navigation */}
