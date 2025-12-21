@@ -39,7 +39,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-martial-red/20 border border-martial-red/30 rounded-full px-4 py-2 mb-6">
             <Zap className="w-4 h-4 text-martial-gold" />
-            <span className="text-sm font-medium text-martial-light">Freelance Sanda Trainer</span>
+            <span className="text-sm font-medium text-martial-light">Sanda training in Singapore</span>
           </div>
           
           {/* Main Headline */}
@@ -53,7 +53,7 @@ const Hero = () => {
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Join me in an exciting journey with Chinese kickboxing. 
+            Join us in an exciting journey with Chinese kickboxing. 
             Build strength, technique, and confidence through fun, engaging training.
           </p>
           
@@ -67,18 +67,6 @@ const Hero = () => {
               <Target className="w-5 h-5" />
               View Programs
             </Button>
-          </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-martial-gold mb-2">5+</div>
-              <div className="text-muted-foreground">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-martial-gold mb-2">10+</div>
-              <div className="text-muted-foreground">Competitions</div>
-            </div>
           </div>
         </div>
       </div>
