@@ -19,13 +19,13 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: "Khao Noi Gym [KNG] 50 Jalan Benaan Kapal Singapore 399641 5 minutes from Stadium MRT",
+      details: "Khao Noi Gym [KNG] 50 Jalan Benaan Kapal Singapore 399641\n 5 minutes from Stadium MRT",
       action: "Get Directions"
     },
     {
       icon: Clock,
       title: "Training Hours",
-      details: "Sat: 3:00pm - 4:30pm\n Dynamic Classes on Saturdays\n Combined Level trainings",
+      details: "Sat: 3:00pm - 4:30pm\n Dynamic Classes on Saturdays\n More slots coming soon!",
       // action: "View Schedule"
     }
   ];
