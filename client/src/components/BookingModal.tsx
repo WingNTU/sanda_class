@@ -285,6 +285,9 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
               <p className="text-sm text-muted-foreground mt-2">
                 All sessions are 90mins long with personalized attention in a small group setting
               </p>
+              <p className="text-sm text-muted-foreground mt-2">
+                Personal training slots are to be arranged separately via Telegram
+              </p>
             </Card>
           </div>
 
