@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Training Hours",
-      details: "Sat: 5.30pm - 7pm\n Dynamic Classes on Saturdays\n Combined Level trainings",
+      details: "Sat: 3:00pm - 4:30pm\n Dynamic Classes on Saturdays\n Combined Level trainings",
       // action: "View Schedule"
     }
   ];
