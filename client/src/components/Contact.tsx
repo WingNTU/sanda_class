@@ -19,7 +19,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: "Keiseikan Martial Arts Gym @ 342D King George's Ave, Singapore 208575\nBlk 342D Level 4",
+      details: "Khao Noi Gym [KNG] 50 Jalan Benaan Kapal Singapore 399641 5 minutes from Stadium MRT",
       action: "Get Directions"
     },
     {
@@ -67,7 +67,7 @@ const Contact = () => {
                       window.open('https://www.instagram.com/hoawing', '_blank');
                     } else if (index === 2) {
                       // Google Maps directions
-                      const address = 'Keiseikan Martial Arts Gym, 342D King George\'s Ave, Singapore 208575';
+                      const address = 'Khao Noi Gym [KNG] 50 Jalan Benaan Kapal Singapore 399641';
                       const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
                       window.open(googleMapsUrl, '_blank');
                     }

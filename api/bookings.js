@@ -105,7 +105,7 @@ export default async function handler(req, res) {
         telegramHandle: bookingData.telegramHandle.trim(),
         program: bookingData.program || 'Group Classes',
         selectedDate: new Date(bookingData.selectedDate).toISOString(),
-        timeSlot: bookingData.timeSlot || '5:30 PM - 7:00 PM',
+        timeSlot: bookingData.timeSlot || '3:00 PM - 4:30 PM',
         remarks: bookingData.remarks || '',
         submittedAt: new Date().toISOString(),
         status: 'pending'

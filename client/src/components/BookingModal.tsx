@@ -36,14 +36,14 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
     telegramHandle: "",
     program: "Group Classes",
     selectedDate: null,
-    timeSlot: "5:30 PM - 7:00 PM"
+    timeSlot: "3:00 PM - 4:30 PM"
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
 
   // Available time slots (only weekends 5pm-6:30pm)
   const availableTimeSlots = [
-    "5:30 PM - 7:00 PM"
+    "3:00 PM - 4:30 PM"
   ];
 
   // Check if selected date is weekend (Saturday or Sunday)
@@ -148,7 +148,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
           telegramHandle: "",
           program: "Group Classes",
           selectedDate: null,
-          timeSlot: "5:30 PM - 7:00 PM"
+          timeSlot: "3:00 PM - 4:30 PM"
         });
       } else {
         const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
@@ -280,7 +280,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
             <Card className="p-4 bg-muted/20">
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-martial-red" />
-                <span className="font-medium">Saturday: 5:30 PM - 7:00 PM</span>
+                <span className="font-medium">Saturday: 3:00 PM - 4:30 PM</span>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
                 All sessions are 90mins long with personalized attention in a small group setting
