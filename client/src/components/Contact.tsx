@@ -4,16 +4,16 @@ import { MapPin, Phone, Mail, Clock, MessageSquare, Instagram } from "lucide-rea
 
 const Contact = () => {
   const contactInfo = [
-    {
-      icon: Phone,
-      title: "Telegram",
-      details: "tele me @wingbae for enquiries",
-      action: "Message Now"
-    },
+    // {
+    //   icon: Phone,
+    //   title: "Telegram",
+    //   details: "tele me @wingbae for enquiries",
+    //   action: "Message Now"
+    // },
     {
       icon: Instagram,
       title: "Instagram",
-      details: "check out more sanda contents @hoawing",
+      details: "DM me @wingsandapt for enquiries\n Follow for updates",
       action: "Find out more"
     },
     {
