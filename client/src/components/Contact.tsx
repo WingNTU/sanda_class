@@ -95,10 +95,10 @@ const Contact = () => {
                   variant="cta" 
                   size="lg" 
                   className="group"
-                  onClick={() => window.open('https://t.me/wingbae', '_blank')}
+                  onClick={() => window.open('https://www.instagram.com/wingsandapt', '_blank')}
                 >
                   <MessageSquare className="w-5 h-5" />
-                  Telegram Me
+                  DM Me on IG
                 </Button>
               </div>
             </div>
